@@ -1,0 +1,194 @@
+.panel {
+  width: 240px;
+  flex-shrink: 0;
+  background: var(--panel-bg);
+  border-right: 1px solid var(--panel-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 16px 14px;
+  overflow-y: auto;
+  font-family: var(--font-ui);
+}
+
+.levelRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.levelBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--accent);
+  padding: 4px 10px;
+  background: var(--accent-glow);
+}
+
+.levelLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+}
+
+.levelNum {
+  font-family: var(--font-display);
+  font-size: 30px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.xpBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.xpLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.2em;
+}
+
+.xpBar {
+  height: 5px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.xpFill {
+  height: 100%;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+
+.xpVal {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.divider {
+  height: 1px;
+  background: var(--panel-border);
+  margin: 12px 0;
+}
+
+.idBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.nameLabel,
+.classLabel,
+.corpLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.2em;
+  margin-top: 6px;
+}
+
+.nameVal {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--text-bright);
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.classVal {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+
+.corpVal {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  background: rgba(230, 59, 46, 0.12);
+  border: 1px solid rgba(230, 59, 46, 0.5);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  padding: 5px 10px;
+  text-align: center;
+  animation: badgePulse 3s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(230,59,46,0.2); }
+  50% { box-shadow: 0 0 14px rgba(230,59,46,0.5); }
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sectionLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.25em;
+}
+
+.noteList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.noteList li {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text);
+  letter-spacing: 0.1em;
+  transition: color 0.15s;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.locRow {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.loc {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}

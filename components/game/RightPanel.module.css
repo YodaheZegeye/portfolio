@@ -1,0 +1,135 @@
+.panel {
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--panel-bg);
+  border-left: 1px solid var(--panel-border);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 14px;
+  overflow-y: auto;
+  gap: 0;
+}
+
+.divider {
+  height: 1px;
+  background: var(--panel-border);
+  margin: 12px 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.25em;
+}
+
+.questTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.activeTitle {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-bright);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.activeSub {
+  font-size: 13px;
+  color: var(--accent);
+}
+
+.activeDates {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 3px 7px;
+  border: 1px solid var(--panel-border);
+  color: var(--text);
+  letter-spacing: 0.1em;
+}
+
+.abilityList {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ability {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.abilityName {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text);
+  letter-spacing: 0.1em;
+}
+
+.abilityBar {
+  height: 3px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.abilityFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), rgba(230,59,46,0.5));
+}
+
+.statusList {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statusKey {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+
+.statusVal {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text);
+  letter-spacing: 0.1em;
+}
+
+.accentVal {
+  color: var(--accent);
+}

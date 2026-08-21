@@ -1,0 +1,52 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #080808;
+  --panel-bg: rgba(12, 4, 4, 0.92);
+  --panel-border: rgba(230, 59, 46, 0.2);
+  --accent: #e63b2e;
+  --accent-glow: rgba(230, 59, 46, 0.15);
+  --text: #b8b8b8;
+  --text-bright: #e0e0e0;
+  --text-dim: #555;
+  --font-display: var(--face-bebas), "Bebas Neue", cursive;
+  --font-ui: var(--face-rajdhani), "Rajdhani", sans-serif;
+  --font-mono: var(--face-mono), "Share Tech Mono", monospace;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  letter-spacing: 0.05em;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--panel-border) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--panel-border);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-ui);
+}
