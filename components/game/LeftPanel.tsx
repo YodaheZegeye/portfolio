@@ -1,12 +1,12 @@
 import styles from "./LeftPanel.module.css";
 import { profile, education, experience } from "@/lib/data";
 
-export default function LeftPanel() {
+export default function LeftPanel({ isOpen }: { isOpen: boolean }) {
   const currentJob = experience[0];
   const uni = education[0];
 
   return (
-    <aside className={styles.panel}>
+    <aside className={`${styles.panel} ${isOpen ? styles.open : ""}`}>
       <div className={styles.levelRow}>
         <div className={styles.levelBox}>
           <span className={styles.levelLabel}>LVL</span>
