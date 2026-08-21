@@ -309,3 +309,60 @@
   color: var(--accent);
   letter-spacing: 0.1em;
 }
+
+/* ── Mobile ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+  }
+
+  .body {
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .entryTitle {
+    font-size: 20px;
+  }
+
+  .entryMeta {
+    font-size: 11px;
+  }
+
+  .bullets li {
+    font-size: 13px;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+  }
+
+  .cardDesc {
+    font-size: 13px;
+  }
+
+  .form {
+    max-width: 100%;
+  }
+
+  .input,
+  .textarea {
+    font-size: 16px; /* prevents iOS auto-zoom */
+  }
+
+  .submitBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
