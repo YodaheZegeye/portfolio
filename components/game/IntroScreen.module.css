@@ -135,3 +135,53 @@
   border-bottom: 1px solid var(--accent);
   border-right: 1px solid var(--accent);
 }
+
+/* ── Mobile ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    padding: 32px 24px;
+  }
+
+  .hi {
+    font-size: 120px;
+    line-height: 1;
+  }
+
+  .right {
+    align-items: center;
+  }
+
+  .greeting {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+  }
+
+  .name {
+    font-size: clamp(32px, 9vw, 56px);
+  }
+
+  .role {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  .bio {
+    border-left: none;
+    padding-left: 0;
+    border-top: 2px solid var(--panel-border);
+    padding-top: 12px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .enter {
+    align-self: center;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
