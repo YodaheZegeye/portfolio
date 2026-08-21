@@ -16,12 +16,31 @@ type Tab = (typeof TABS)[number];
 
 export default function GameUI() {
   const [tab, setTab] = useState<Tab>("BEGINNING");
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  function selectTab(t: string) {
+    setTab(t as Tab);
+    setDrawerOpen(false);
+  }
 
   return (
     <div className={styles.root}>
       <div className={styles.bgGlow} />
 
+      {drawerOpen && (
+        <div className={styles.overlay} onClick={() => setDrawerOpen(false)} />
+      )}
+
       <header className={styles.topBar}>
+        <button
+          className={styles.menuBtn}
+          onClick={() => setDrawerOpen((o) => !o)}
+          aria-label="Open character panel"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
         <span className={styles.sysLabel}>SYS://PORTFOLIO.v2.4</span>
         <div className={styles.topRight}>
           <span className={styles.statusDot} />
@@ -30,7 +49,7 @@ export default function GameUI() {
       </header>
 
       <div className={styles.body}>
-        <LeftPanel />
+        <LeftPanel isOpen={drawerOpen} />
 
         <main className={styles.center}>
           <div className={styles.tabContent}>
@@ -45,7 +64,7 @@ export default function GameUI() {
         <RightPanel activeTab={tab} />
       </div>
 
-      <BottomNav active={tab} onSelect={(t) => setTab(t as Tab)} tabs={[...TABS]} />
+      <BottomNav active={tab} onSelect={selectTab} tabs={[...TABS]} />
     </div>
   );
 }
