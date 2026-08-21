@@ -133,3 +133,10 @@
 .accentVal {
   color: var(--accent);
 }
+
+/* ── Mobile — hide entirely ────────────────────────── */
+@media (max-width: 768px) {
+  .panel {
+    display: none;
+  }
+}
